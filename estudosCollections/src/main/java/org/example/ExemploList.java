@@ -32,6 +32,7 @@ public class ExemploList {
         notas.add(9.2);
         notas.add(5.5);
         notas.add(4.9);
+        notas.add(0.0);
         notas.add(2.8);
         System.out.println(notas);
         System.out.println(notas.toString());
@@ -53,8 +54,57 @@ public class ExemploList {
         System.out.println("Conferindo se a nota 5 está na lista: \n"+ notas.contains(5d)+"\n");
 
         System.out.println("Exibindo as notas na ordem que foram informadas: ");
-        for (Double nota : notas) System.out.println(nota);
+        for (Double nota : notas) System.out.print(nota+", ");
+
+        System.out.println("\n");
+        System.out.println("Exibindo a terceira nota adicionada \n"+ notas.get(2));
 
 
+        System.out.println("\n");
+        System.out.println("Exibindo a menor nota \n"+ Collections.min(notas));
+
+        System.out.println("\n");
+        System.out.println("Exibindo a maior nota \n"+ Collections.max(notas));
+
+        System.out.println("\n");
+        Iterator<Double> iterator = notas.iterator();
+        Double soma = 0d;
+        while(iterator.hasNext()){
+            Double next = iterator.next();
+            soma +=next;
+        }
+        System.out.println("Exibindo a soma das notas: \n"+ soma);
+
+
+        System.out.println("\n");
+        System.out.println("Exibindo media das notas \n"+ (soma/ notas.size()));
+
+        System.out.println("\n");
+        notas.remove(0d);
+        System.out.println("Removendo nota 0 \n"+ notas );
+
+
+        System.out.println("\n");
+        notas.remove(0);
+        System.out.println("Removendo nota na posição 0 \n"+ notas );
+
+
+
+        System.out.println("\n");
+        System.out.println("remova as notas menores que 7 da lista");
+        Iterator<Double> iterator1 = notas.iterator();
+        while (iterator1.hasNext()){
+            Double next = iterator1.next();
+            if(next<7) iterator1.remove();
+        }
+        System.out.print(notas);
+
+        System.out.println("\n");
+        System.out.println("Apagando toda a lista");
+        notas.clear();
+        System.out.println(notas);
+
+        System.out.println("\n");
+        System.out.println("Checando se a lista está vazia: "+ notas.isEmpty());
     }
 }
