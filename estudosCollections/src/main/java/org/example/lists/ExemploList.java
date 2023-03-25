@@ -1,4 +1,4 @@
-package org.example;
+package org.example.lists;
 
 import java.sql.Array;
 import java.util.ArrayList;
@@ -13,7 +13,7 @@ public class ExemploList {
        // List notas = new ArrayList<>(); METODO pré java 5
         //List<Double> notas = new ArrayList<>(); //Generics e Diamond Operator
 //        ArrayList<Double> notas = new ArrayList<>();
-       // List<Double> notas = new ArrayList<>(Arrays.asList(7d,8.6,5.5,3d,10d,5d,3.6));
+        List<Double> notas = new ArrayList<>(Arrays.asList(7d,8.6,5.5,3d,10d,5d,3.6));
       // List<Double> notas = Arrays.asList(6d,10d,5.5,7.8,9.9,4.5,3d,5d,9d); //Lista imutavel
 
 //        List<Double> notas = List.of(5d,6.6,5.2,3d,1d,10d,6.7,4.8);
@@ -23,7 +23,7 @@ public class ExemploList {
 
         System.out.println("Crie uma lista de adicione notas");
 
-        List<Double> notas = new ArrayList<>(); //Generics e Diamond Operator
+   //     List<Double> notas = new ArrayList<>(); //Generics e Diamond Operator
         notas.add(7d);
 
         notas.add(5d);
